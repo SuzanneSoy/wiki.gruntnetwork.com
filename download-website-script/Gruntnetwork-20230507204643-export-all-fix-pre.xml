@@ -1,0 +1,623 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.3/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.3/ http://www.mediawiki.org/xml/export-0.3.xsd" version="0.3" xml:lang="fr">
+  <siteinfo>
+    <sitename>Gruntnetwork</sitename>
+    <base>https://wiki.gruntnetwork.com/Accueil</base>
+    <generator>MediaWiki 1.15.1</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2">Média</namespace>
+      <namespace key="-1">Spécial</namespace>
+      <namespace key="0" />
+      <namespace key="1">Discussion</namespace>
+      <namespace key="2">Utilisateur</namespace>
+      <namespace key="3">Discussion utilisateur</namespace>
+      <namespace key="4">Gruntnetwork</namespace>
+      <namespace key="5">Discussion Gruntnetwork</namespace>
+      <namespace key="6">Fichier</namespace>
+      <namespace key="7">Discussion fichier</namespace>
+      <namespace key="8">MediaWiki</namespace>
+      <namespace key="9">Discussion MediaWiki</namespace>
+      <namespace key="10">Modèle</namespace>
+      <namespace key="11">Discussion modèle</namespace>
+      <namespace key="12">Aide</namespace>
+      <namespace key="13">Discussion aide</namespace>
+      <namespace key="14">Catégorie</namespace>
+      <namespace key="15">Discussion catégorie</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Accueil</title>
+    <id>1</id>
+    <revision>
+      <id>11737</id>
+      <timestamp>2011-06-21T11:25:11Z</timestamp>
+      <contributor>
+        <ip>193.239.192.194</ip>
+      </contributor>
+      <text xml:space="preserve">== gruntnetwork ==
+
+gruntnetwork est un système d'exploitation sous licence Affero GPL. Actuellement il est en phase de développement, dans le cadre d'un projet pédagogique à l'Université Montpellier 2.
+
+== Nouveau Développeur ? ==
+{{:Nouveau Développeur}}
+
+[[notes]]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Affichage Graphique</title>
+    <id>12</id>
+    <revision>
+      <id>67</id>
+      <timestamp>2009-03-04T15:14:06Z</timestamp>
+      <contributor>
+        <username>Jsmaniac</username>
+        <id>1</id>
+      </contributor>
+      <comment>correspond pas à ce qu'on a fait</comment>
+      <text xml:space="preserve" />
+    </revision>
+  </page>
+  <page>
+    <title>Conventions</title>
+    <id>3</id>
+    <revision>
+      <id>31</id>
+      <timestamp>2009-02-08T17:02:59Z</timestamp>
+      <contributor>
+        <ip>78.115.6.242</ip>
+      </contributor>
+      <comment>/* En C */</comment>
+      <text xml:space="preserve">Les conventions suivantes seront utilisées pour un code homogène.
+
+== En C ==
+
+* L'indentation se fait à 4 espaces par tabulation.
+* Pas de transformation des espaces en tabulation.
+* &lt;code&gt;nomsDeVariables&lt;/code&gt;
+* &lt;code&gt;NOMS_DE_CONSTANTE&lt;/code&gt;
+* Fonctions :
+&lt;pre&gt;
+ type_retour nom_fonction(type_param_1 param_1, ..., type_param_n param_n) {
+ code;
+ }
+&lt;/pre&gt;
+* Boucles for, avec déclaration locale à la boucle de l'itérateur s'il n'a pas lieu d'être à l'extérieur (int i=a) :
+&lt;pre&gt;
+ for (int i=a; i&lt;b; i++) {
+ code;
+ }
+&lt;/pre&gt;
+
+== En assembleur ==
+
+On utilisera la syntaxe Gas, car elle est compatible avec le compilateur GCC</text>
+    </revision>
+  </page>
+  <page>
+    <title>Drivers/mode reel.h:int86</title>
+    <id>20</id>
+    <revision>
+      <id>54</id>
+      <timestamp>2009-02-11T13:40:21Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <comment>Nouvelle page : {{fonctionC |void|int86|{{dec_param_d|int|interruption}}, {{dec_param_d|regs86|registres_in}}, {{dec_param_r|regs86|registres_out}} |{{param_d|registres_in}} est la valeur des regist...</comment>
+      <text xml:space="preserve">{{fonctionC
+|void|int86|{{dec_param_d|int|interruption}}, {{dec_param_d|regs86|registres_in}}, {{dec_param_r|regs86|registres_out}}
+|{{param_d|registres_in}} est la valeur des registres
+avant l'interruption {{param_d|interruption}},
+{{param_r|registres_out}} est la valeur des registres après interruption.
+
+Cette fonction n'est pas encore écrite.
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Environnement de programmation</title>
+    <id>8</id>
+    <revision>
+      <id>27</id>
+      <timestamp>2009-01-06T11:51:51Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <comment>/* Tests */</comment>
+      <text xml:space="preserve">== Éditeur ==
+
+Votre préféré :) Personne ne vous oblige à quoi que ce soit. Prévoyez-en un avec indentation et coloration syntaxique quand même, nano et cat sont un peu rudimentaires de ce point de vue…
+
+== Gestion des versions ==
+
+SVN sera utilisé pour la gestion des versions.
+
+&lt;pre&gt;
+ svn co svn+ssh://VOTREUSER@svn.tuxfamily.org/svnroot/gruntnetwork/systeme 
+ svn co svn+ssh://VOTREUSER@svn.tuxfamily.org/svnroot/gruntnetwork/applications
+&lt;/pre&gt;
+
+Voir [http://faq.tuxfamily.org/SVN/Fr la faq de TuxFamily] pour plus d'infos sur l'utilisation.
+
+== Compilateur ==
+
+Pour le C : '''gcc'''. Car c'est le plus courant sous linux, car il gère directement l'assembleur (syntaxe gas), car beaucoup de monde l'utilise donc on trouvera facilement de la documentation, car il est sous licence libre.
+
+On utilisera la version 4.3, de préférence 4.3.2 (c'est celle par défaut sous ubuntu, et sous debian testing/unstable). Si vous avez une autre version, pas de problème, mais en cas de bug bizarre, il vaudra mieux vérifier que c'est bien le code qui plante et non pas une version bugguée de gcc (c'est arrivé par le passé…)
+
+== Tests ==
+
+'''NE TESTEZ JAMAIS gruntnetwork SUR UN PC RÉEL''', à moins que vous n'ayez pas peur d'un effacement de disque.
+Je possède moi-même un PC avec un vieux disque dur vide de quelques Go, ça pourra servir pour faire des tests grandeur nature lorsque le projet sera viable.
+
+Pour les tests nous utiliserons [http://bellard.org/qemu/ qemu], un émulateur de PC libre, fonctionnant sous linux et windows, probablement sous mac aussi. Seule l'architecture x86 sera supportée pour l'instant.
+
+Lorsque nous en viendrons à écrire les drivers, il sera possible d'utiliser bochs pour voir si les bons drivers sont chargés lorsque la configuration matérielle (l'ensemble du matériel disponible sur un PC) change.
+
+Le démarrage (boot) sera assuré par [[GRUB]], installé sur une image de disquette vierge (un fichier de 1.44 Mo simulant une disquette sur laquelle seront présents GRUB, gruntnetwork et rien d'autre). Cette configuration simple évitera que d'autres facteurs de causent des bugs.</text>
+    </revision>
+  </page>
+  <page>
+    <title>GRUB</title>
+    <id>11</id>
+    <revision>
+      <id>28</id>
+      <timestamp>2009-01-06T11:53:42Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <comment>Nouvelle page : Grub est le chargeur de démarrage utilisé par gruntnetwork.  Lors du démarrage de l'ordinateur, il est chargé en mémoire par le BIOS (Basic Input Output System), puis il est ex...</comment>
+      <text xml:space="preserve">Grub est le chargeur de démarrage utilisé par gruntnetwork.
+
+Lors du démarrage de l'ordinateur, il est chargé en mémoire par le BIOS (Basic Input Output System), puis il est exécuté. Sa tâche consiste alors à afficher un menu à l'écran permettant à l'utilisateur de choisir le système d'exploitation qu'il souhaite démarrer.</text>
+    </revision>
+  </page>
+  <page>
+    <title>Langage</title>
+    <id>9</id>
+    <revision>
+      <id>25</id>
+      <timestamp>2009-01-04T05:54:38Z</timestamp>
+      <contributor>
+        <username>Jsmaniac</username>
+        <id>1</id>
+      </contributor>
+      <minor/>
+      <comment>a renommé [[Langage/]] en [[Langage]]</comment>
+      <text xml:space="preserve">gruntnetwork utilise de manière interne un langage de programmation graphique, qui se présente de la manière suivante :
+
+* Les fonctions sont représentées par des blocs
+* Les blocs possèdent des ports d'entrée (paramètres de la fonction) et de sortie (valeur'''s''' de sortie)
+* Un bloc n'est pas caractérisé par son nom, mais par un identifiant interne, donc pas de conflits de nommage
+
+* Les ports ont des conditions sur leurs valeurs (type, intervalle de valeurs, …)
+* Les ports peuvent (devraient) avoir une valeur par défaut
+* Les ports ont un nom et une description associée
+
+* Les blocs sont reliés entre eux en connectant leurs ports
+* Un port de sortie peut être connecté à plusieurs ports d'entrée, la valeur de sortie étant conservée en mémoire tant qu'elle est nécessaire (ceci est l'équivalent d'un &lt;code&gt;let&lt;/code&gt; en scheme, ou d'une variable locale)
+* Un bloc est composé d'autres blocs dont certains ports sont connectés aux ports du bloc englobant.
+
+Il y a une certaine analogie entre les blocs et des circuits éléctroniques : l'information circule au travers des connexions et est modifiée par les blocs. Un bloc effectue une tâche définie, et peut être vu comme un composant électronique : on n'a pas besoin de voir à l'intérieur pour l'utiliser.
+
+Le langage s'écrit au travers d'une interface de recherche, qui permet de sélectionner le bon bloc parmi plusieurs homonymes s'il y en a.</text>
+    </revision>
+  </page>
+<!--
+  <page>
+    <title>Langage/</title>
+    <id>10</id>
+    <revision>
+      <id>26</id>
+      <timestamp>2009-01-04T05:54:38Z</timestamp>
+      <contributor>
+        <username>Jsmaniac</username>
+        <id>1</id>
+      </contributor>
+      <comment>a renommé [[Langage/]] en [[Langage]]</comment>
+      <text xml:space="preserve">#REDIRECT [[Langage]]</text>
+    </revision>
+  </page>
+-->
+  <page>
+    <title>Liens</title>
+    <id>4</id>
+    <revision>
+      <id>73</id>
+      <timestamp>2009-12-31T01:15:10Z</timestamp>
+      <contributor>
+        <ip>195.83.178.10</ip>
+      </contributor>
+      <comment>Annulation des modifications 70 de [[Special:Contributions/94.253.24.87|94.253.24.87]] ([[User talk:94.253.24.87|discussion]])</comment>
+      <text xml:space="preserve">== Notions ==
+
+* [http://fr.wikipedia.org/wiki/Basic_Input_Output_System BIOS] pour ceux qui ne savent pas ce que c'est
+
+=== Assembleur ===
+
+* [http://mark.masmcode.com/ Optimisation]
+* [http://www.asmcommunity.net/ asmcommunity.net]
+* [http://gok.customer.netspace.net.au/resources/ Hacks SVGA]
+* [http://www.x86-guide.com/ Guide pour l'assembleur X86]
+* [http://asm.sourceforge.net/ asm.sourceforge.net]
+* [http://www.ctyme.com/intr/int.htm Interruptions du BIOS]
+* [http://heim.ifi.uio.no/~stanisls/helppc/idx_interrupt.html Encore les interruptions]
+* [http://www.penguin.cz/~literakl/intel/intel.html 80x86 instruction set]
+
+=== Démarrage (boot) ===
+
+* [http://susam.in/articles/boot-sector-code/ Secteur de boot]
+* [http://www.osdcom.info/content/view/33/39/ Après GRUB (multiboot)]
+* Premier boot de la première version de linux : [http://www.oldlinux.org/Linux.old/kernel/0.00/linux-0.01/boot/boot.s] et [http://www.oldlinux.org/Linux.old/kernel/0.1x/linux-0.10/boot/bootsect.s]
+* [http://en.wikibooks.org/wiki/X86_Assembly/Bootloaders Chargeurs de démarrage] sur le wiki X86_Assembly
+* [http://www.vnutz.com/content/program_a_bootstrap_loader Programmer un chargeur de démarrage]
+* [http://www.pixelbeat.org/docs/disk/ Organisation du disque dur] (secteur de boot et fichiers de grub)
+* [http://www.gnu.org/software/grub/manual/multiboot/multiboot.html Multiboot Specification]
+* [http://www.sfr-fresh.com/linux/misc/grub-0.97.tar.gz/ Grub-0.97.tar.gz] (Téléchargement des sources)
+
+=== Modes du processeur (réel, protégé, ...) ===
+* [http://www.x86.org/articles/pmbasics/tspec_a1_doc.htm Protected Mode Basics] : Les bases, y entrer, en sortir '''sur le processeur 80286''' (donc pas pour nous)
+* [http://en.wikibooks.org/wiki/X86_Assembly/Protected_Mode X86 Assembly/Protected Mode]
+* [http://osdev.berlios.de/v86.html Virtual 8086 Mode] : du réel dans du protégé
+* [http://benoit.papillault.free.fr/c/l32/pm.asm pm.asm] : passage en mode protégé puis retour en mode réel + du V86 quelque part.
+* [http://www.sudleyplace.com/pmtorm.html Transition from Protected Mode to Real Mode]
+
+=== Affichage Graphique ===
+Voir l'article [[Affichage Graphique]].
+
+* [http://heim.ifi.uio.no/~stanisls/helppc/ascii.gif Table des caractères ascii]
+* [http://www.faqs.org/faqs/pc-hardware-faq/supervga-programming/ SuperVGA/VESA programmer's notes]
+* [http://en.wikipedia.org/wiki/VESA_BIOS_Extensions VESA BIOS Extensions] sur wikipedia
+* [http://atschool.eduweb.co.uk/camdean/pupils/amac/vga.htm#11 Tutorial on VGA Graphics] : VGA, souris, bitmap
+* [http://osdev.berlios.de/v86.html Virtual 8086 Mode] : Utiliser le mode 8086 virtuel pour accéder aux fonctions VESA du BIOS
+* [http://www.inversereality.org/tutorials/graphics%20programming/videomodesvesa.html VESA Video Modes] Comment obtenir la liste des modes disponibles et des informations les concernant.
+* [http://www.student.cs.uwaterloo.ca/~cs452/grub/ patch vbe] pour que grub nous passe en mode graphique
+* [http://svn.navi.cx/misc/trunk/metalkit/lib/vbe.c Utilisation de l'interface en mode protégé de VBE]
+
+==== Références VESA ====
+
+* [http://docs.ruudkoot.nl/vesasp12.txt VESA BIOS Extension 1.2]
+* [http://docs.ruudkoot.nl/vbe20.txt VESA BIOS Extension 2.0]
+* [http://www.vesa.org/public/VBE/vbe3.pdf VESA BIOS Extension 3.0]
+
+=== Drivers ===
+
+==== Souris ====
+* [http://wiki.osdev.org/Mouse_Input Mouse Input] : Comment configurer et écouter une souris PS/2 sur osdev.org
+
+==== Clavier ====
+* [http://wiki.osdev.org/PS2_Keyboard#Protected_Mode_Keyboard_Driver PS2 Keyboard] : driver sur osdev.org
+* [http://www.win.tue.nl/~aeb/linux/kbd/scancodes.html Keyboard scancodes] Quel code envoyé par le clavier correspond à quel caractère.
+
+== Portails ==
+
+* [http://www.osdev.org/ osdev.org] : Wiki + Forum sur le développement d'OS
+* [http://www.nondot.org/sabre/os/articles OSRC] : Operating System Ressource Center
+* [http://www.osdever.net/ Bona Fide OS Development]
+
+== Tutoriels ==
+
+* [http://a.michelizza.free.fr/pmwiki.php?n=TutoOS.TutoOS Pépin] : tuto du boot au shell, très complet.
+* [http://aaprog.blogspot.com/2008/04/systme-dexploitation-1-les-outils.html AAProg] : Pas beaucoup de code mais de très bonnes explications
+* Tutoriels sur [http://www.osdever.net/tutorials.php?cat=0&amp;sort=1 Bona Fide]
+
+== Petits systèmes d'exploitation ==
+Toujours pratique pour s'inspirer…
+
+* [http://wiki.osdev.org/Projects Liste de projets d'OS] sur osdev.org
+* [http://www.dynatos.org/ dynatos]
+* [http://gok.customer.netspace.net.au/resources/ UNIOS]
+* [http://www.sarg.ryerson.ca/~cmwilson/code/funos/funos.html funos]
+* [http://www.ninj4.net/kinetic/ kinetic], écrit en haskell. Ça vaut le coup d'oeuil.
+
+== Divers ==
+* [http://www.siteduzero.com/forum-83-276054-p1-creer-son-propre-systeme-d-exploitation.html Sujet] sur le site du zéro, pas mal de liens</text>
+    </revision>
+  </page>
+  <page>
+    <title>Notes</title>
+    <id>24</id>
+    <revision>
+      <id>11738</id>
+      <timestamp>2011-06-21T11:27:13Z</timestamp>
+      <contributor>
+        <ip>193.239.192.194</ip>
+      </contributor>
+      <comment>Page créée avec « Permettre à une construction de déclarer des mot-clés (keywords) qui seront valides ou non à certains endroits du code dans la construction, mais ne pourront pas être re… »</comment>
+      <text xml:space="preserve">Permettre à une construction de déclarer des mot-clés (keywords) qui seront valides ou non à certains endroits du code dans la construction, mais ne pourront pas être redéclarés tant que la construction a un effet. C'est une alternative à la possibilité de rajouter des variables &quot;par nom&quot; pour qu'elles soient utilisées par ex. par le code d'une fonction.</text>
+    </revision>
+  </page>
+  <page>
+    <title>Nouveau Développeur</title>
+    <id>7</id>
+    <revision>
+      <id>29</id>
+      <timestamp>2009-02-02T00:31:55Z</timestamp>
+      <contributor>
+        <ip>90.9.192.151</ip>
+      </contributor>
+      <comment>Ajout de la sous partie S'inscrire</comment>
+      <text xml:space="preserve">== S'inscrire ==
+* Créez-vous un compte sur [http://tuxfamily.org/fr/subscribe TuxFmaily] et adhérez au projet gruntnetwork
+* Créez-vous un compte sur le [http://wiki.gruntnetwork.com/index.php5?title=Special:Connexion&amp;type=signup&amp;returnto=Nouveau_D%C3%A9veloppeur wiki]
+* Créez-vous un compte sur le [http://tracker.gruntnetwork.com/index.php?do=register tracker]
+
+== À lire ==
+* [[Prérequis]] : Un peu de lecture pour les vacances. Si vous ne savez rien sur les sujets listés dans cette page, vous risquez d'être à la traîne.
+* [[Conventions]] : À respecter, pour un code homogène. Si vous avez quoi que ce soit à redire dessus, faites-le vite, avant qu'on ait des centaines de lignes à reformater :)
+* [[Environnement de programmation]] : Avec quoi on travaille (Emacs ou Vim + gcc + qemu ou bochs).
+* [http://tracker.gruntnetwork.com/roadmap Feuille de route] : Qui fait quoi, Quand, dans Quel ordre.
+* [[Liens]] : Quand vous ne saurez plus comment faire un truc en assembleur :)</text>
+    </revision>
+  </page>
+  <page>
+    <title>Prérequis</title>
+    <id>2</id>
+    <revision>
+      <id>33</id>
+      <timestamp>2009-02-08T17:15:49Z</timestamp>
+      <contributor>
+        <ip>78.115.6.242</ip>
+      </contributor>
+      <comment>/* Connaissance du C et de l'assembleur */</comment>
+      <text xml:space="preserve">'''Une chose à retenir''' : Si vous êtes largués, si vous ne comprenez pas, si vous piétinez sur un bout de code qui compile pas : n'attendez pas le déluge pour vous signaler !
+Il y aura toujours quelqu'un pour vous aider à comprendre ce qui vous pose problème.
+
+Certaines pages lisées ici sont en anglais : si vous avez du mal, envoyez-moi un message et je ferai une traduction.
+
+== Un peu de lecture ==
+
+=== Conception D'OS (GNU/Linux Magazine) ===
+
+Dans GNU/Linux Magazine France est paru il y a quelques années une série d'articles sur la conception de systèmes d'exploitation. Les articles expliquent, pas à pas, comment créer un système simple. Je recommande vivement à tout le monde d'avoir lu ces articles d'ici la mi-janvier, comme ça on saura tous de quoi on parle.
+
+[http://sos.enix.org/fr/SOSDownload Les articles] sont disponibles gratuitement sur internet.
+
+N°s des magazines :
+
+* 62 : Boot + Console
+* 63 : Segmentation et Interruptions
+* 65 : Pagination
+* 68 : Multitâche et changement de contexte
+* 69 : Threads
+* 70 : Espaces d'adressage, appels système et applications utilisateur
+* 72 : Gestion de l'espace virtuel utilisateur
+* 74 : VFS (système de fichiers virtuel)
+
+Vu que ce dernier numéro contient la deuxième partie d'un article très intéressant sur la compression de données, vous voudrez peut-être la première partie : n° 73.
+Le site [http://www.ed-diamond.com/ ed-diamond] vous permet de commander ces anciens numéros. Il propose un « PowerPack x10 » à 25€, donc ça fait un bon cadeau de noël pour pas trop cher :)
+
+=== a Simple Operating System ===
+
+Un système d'exploitation simple : [http://minso.free.fr/cavinfo/systeme/sos.html sos]
+
+== Connaissance du C et de l'assembleur ==
+
+==== Cours de C : ====
+* http://c.developpez.com/cours/
+* http://www.siteduzero.com/tutoriel-3-14189-apprenez-a-programmer-en-c.html
+* http://c.developpez.com/faq/
+
+==== Cours d'ASM pour plateforme x86 : ====
+* http://benoit-m.developpez.com/assembleur/tutoriel/
+* http://www.scribd.com/search?c=all&amp;query=x86&amp;commit=Search
+
+== Compréhension de la procédure de démarrage (Boot) ==
+
+* [http://fr.wikipedia.org/wiki/Master_boot_record MBR]
+* [http://www.pixelbeat.org/docs/disk/ GRUB]
+* (Une des) [http://fr.wikipedia.org/wiki/Init procédure(s) d'initialisation] de GNU/Linux (Nous n'utiliserons probablement pas cette méthode, mais c'est bon à connaître).
+
+
+Nous utiliserons Grub et le standard Multiboot plutôt que de programmer notre propre chargeur de démarrage, cependant les méchanismes du MBR et de GRUB sont à comprendre pour maîtriser la chose (et pour la soutenance orale...).
+
+== Interruptions du BIOS (pages de référence) ==
+
+* [http://www.ctyme.com/intr/int.htm Liste des interruptions] et de comment on s'en sert
+* Les interruptions int 10h et int 13h seront utilisées.
+* [http://courses.ece.uiuc.edu/ece390/books/labmanual/graphics-int10h.html int 10h]
+* [http://courses.ece.uiuc.edu/ece390/books/labmanual/graphics-mode13h.html int 13h (VGA)]
+* [http://pdos.csail.mit.edu/6.828/2008/readings/hardware/vgadoc/VESA.TXT Modes VESA]</text>
+    </revision>
+  </page>
+  <page>
+    <title>Test fonctionC</title>
+    <id>6</id>
+    <revision>
+      <id>12</id>
+      <timestamp>2009-01-01T01:05:50Z</timestamp>
+      <contributor>
+        <ip>90.14.26.225</ip>
+      </contributor>
+      <comment>Nouvelle page : {{fonctionC |int|floor|float x |Renvoie l'arrondi à l'inférieur de x }}</comment>
+      <text xml:space="preserve">{{fonctionC
+|int|floor|float x
+|Renvoie l'arrondi à l'inférieur de x
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Nouveau Développeur</title>
+    <id>7</id>
+    <revision>
+      <id>29</id>
+      <timestamp>2009-02-02T00:31:55Z</timestamp>
+      <contributor>
+        <ip>90.9.192.151</ip>
+      </contributor>
+      <comment>Ajout de la sous partie S'inscrire</comment>
+      <text xml:space="preserve">== S'inscrire ==
+* Créez-vous un compte sur [http://tuxfamily.org/fr/subscribe TuxFmaily] et adhérez au projet gruntnetwork
+* Créez-vous un compte sur le [http://wiki.gruntnetwork.com/index.php5?title=Special:Connexion&amp;type=signup&amp;returnto=Nouveau_D%C3%A9veloppeur wiki]
+* Créez-vous un compte sur le [http://tracker.gruntnetwork.com/index.php?do=register tracker]
+
+== À lire ==
+* [[Prérequis]] : Un peu de lecture pour les vacances. Si vous ne savez rien sur les sujets listés dans cette page, vous risquez d'être à la traîne.
+* [[Conventions]] : À respecter, pour un code homogène. Si vous avez quoi que ce soit à redire dessus, faites-le vite, avant qu'on ait des centaines de lignes à reformater :)
+* [[Environnement de programmation]] : Avec quoi on travaille (Emacs ou Vim + gcc + qemu ou bochs).
+* [http://tracker.gruntnetwork.com/roadmap Feuille de route] : Qui fait quoi, Quand, dans Quel ordre.
+* [[Liens]] : Quand vous ne saurez plus comment faire un truc en assembleur :)</text>
+    </revision>
+  </page>
+  <page>
+    <title>Affichage Graphique</title>
+    <id>12</id>
+    <revision>
+      <id>67</id>
+      <timestamp>2009-03-04T15:14:06Z</timestamp>
+      <contributor>
+        <username>Jsmaniac</username>
+        <id>1</id>
+      </contributor>
+      <comment>correspond pas à ce qu'on a fait</comment>
+      <text xml:space="preserve" />
+    </revision>
+  </page>
+  <page>
+    <title>Drivers/mode reel.h:int86</title>
+    <id>20</id>
+    <revision>
+      <id>54</id>
+      <timestamp>2009-02-11T13:40:21Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <comment>Nouvelle page : {{fonctionC |void|int86|{{dec_param_d|int|interruption}}, {{dec_param_d|regs86|registres_in}}, {{dec_param_r|regs86|registres_out}} |{{param_d|registres_in}} est la valeur des regist...</comment>
+      <text xml:space="preserve">{{fonctionC
+|void|int86|{{dec_param_d|int|interruption}}, {{dec_param_d|regs86|registres_in}}, {{dec_param_r|regs86|registres_out}}
+|{{param_d|registres_in}} est la valeur des registres
+avant l'interruption {{param_d|interruption}},
+{{param_r|registres_out}} est la valeur des registres après interruption.
+
+Cette fonction n'est pas encore écrite.
+}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Modèle:Dec param d</title>
+    <id>17</id>
+    <revision>
+      <id>52</id>
+      <timestamp>2009-02-11T13:34:50Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <text xml:space="preserve">d:{{{1}}} {{{2}}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Modèle:Dec param r</title>
+    <id>18</id>
+    <revision>
+      <id>53</id>
+      <timestamp>2009-02-11T13:35:32Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <text xml:space="preserve">r:{{{1}}} {{{2}}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Modèle:FonctionC</title>
+    <id>5</id>
+    <revision>
+      <id>15</id>
+      <timestamp>2009-01-01T01:08:08Z</timestamp>
+      <contributor>
+        <ip>90.14.26.225</ip>
+      </contributor>
+      <text xml:space="preserve">== {{{2}}} ==
+
+&lt;code&gt;
+{{{1}}} {{{2}}}({{{3}}});
+&lt;/code&gt;
+
+=== Description ===
+{{{4}}}</text>
+    </revision>
+  </page>
+  <page>
+    <title>Modèle:Param d</title>
+    <id>14</id>
+    <revision>
+      <id>47</id>
+      <timestamp>2009-02-11T13:32:45Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <text xml:space="preserve">d:&lt;code&gt;{{{1}}}&lt;/code&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Modèle:Param r</title>
+    <id>15</id>
+    <revision>
+      <id>45</id>
+      <timestamp>2009-02-11T13:29:35Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <comment>Nouvelle page : r:&lt;code&gt;{{{1}}}&lt;/code&gt;</comment>
+      <text xml:space="preserve">r:&lt;code&gt;{{{1}}}&lt;/code&gt;</text>
+    </revision>
+  </page>
+  <page>
+    <title>Environnement de programmation</title>
+    <id>8</id>
+    <revision>
+      <id>27</id>
+      <timestamp>2009-01-06T11:51:51Z</timestamp>
+      <contributor>
+        <ip>162.38.218.206</ip>
+      </contributor>
+      <comment>/* Tests */</comment>
+      <text xml:space="preserve">== Éditeur ==
+
+Votre préféré :) Personne ne vous oblige à quoi que ce soit. Prévoyez-en un avec indentation et coloration syntaxique quand même, nano et cat sont un peu rudimentaires de ce point de vue…
+
+== Gestion des versions ==
+
+SVN sera utilisé pour la gestion des versions.
+
+&lt;pre&gt;
+ svn co svn+ssh://VOTREUSER@svn.tuxfamily.org/svnroot/gruntnetwork/systeme 
+ svn co svn+ssh://VOTREUSER@svn.tuxfamily.org/svnroot/gruntnetwork/applications
+&lt;/pre&gt;
+
+Voir [http://faq.tuxfamily.org/SVN/Fr la faq de TuxFamily] pour plus d'infos sur l'utilisation.
+
+== Compilateur ==
+
+Pour le C : '''gcc'''. Car c'est le plus courant sous linux, car il gère directement l'assembleur (syntaxe gas), car beaucoup de monde l'utilise donc on trouvera facilement de la documentation, car il est sous licence libre.
+
+On utilisera la version 4.3, de préférence 4.3.2 (c'est celle par défaut sous ubuntu, et sous debian testing/unstable). Si vous avez une autre version, pas de problème, mais en cas de bug bizarre, il vaudra mieux vérifier que c'est bien le code qui plante et non pas une version bugguée de gcc (c'est arrivé par le passé…)
+
+== Tests ==
+
+'''NE TESTEZ JAMAIS gruntnetwork SUR UN PC RÉEL''', à moins que vous n'ayez pas peur d'un effacement de disque.
+Je possède moi-même un PC avec un vieux disque dur vide de quelques Go, ça pourra servir pour faire des tests grandeur nature lorsque le projet sera viable.
+
+Pour les tests nous utiliserons [http://bellard.org/qemu/ qemu], un émulateur de PC libre, fonctionnant sous linux et windows, probablement sous mac aussi. Seule l'architecture x86 sera supportée pour l'instant.
+
+Lorsque nous en viendrons à écrire les drivers, il sera possible d'utiliser bochs pour voir si les bons drivers sont chargés lorsque la configuration matérielle (l'ensemble du matériel disponible sur un PC) change.
+
+Le démarrage (boot) sera assuré par [[GRUB]], installé sur une image de disquette vierge (un fichier de 1.44 Mo simulant une disquette sur laquelle seront présents GRUB, gruntnetwork et rien d'autre). Cette configuration simple évitera que d'autres facteurs de causent des bugs.</text>
+    </revision>
+  </page>
+  <page>
+    <title>Test fonctionC</title>
+    <id>6</id>
+    <revision>
+      <id>12</id>
+      <timestamp>2009-01-01T01:05:50Z</timestamp>
+      <contributor>
+        <ip>90.14.26.225</ip>
+      </contributor>
+      <comment>Nouvelle page : {{fonctionC |int|floor|float x |Renvoie l'arrondi à l'inférieur de x }}</comment>
+      <text xml:space="preserve">{{fonctionC
+|int|floor|float x
+|Renvoie l'arrondi à l'inférieur de x
+}}</text>
+    </revision>
+  </page>
+</mediawiki>

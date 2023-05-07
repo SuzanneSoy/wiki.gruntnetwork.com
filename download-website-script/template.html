@@ -1,0 +1,44 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<link id="layout-css" rel="stylesheet" href="../-/zim.css">
+<!--
+<%B/<%title%>%>
+-->
+</head>
+<body id="zim" class="WikiaPage no-js mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject skin-vector action-view">
+<!--<div id="zim-content" class="mw-body WikiaPageBackground" role="main">-->
+<div id="bodyContent" class="mw-body-content">
+<!--
+<%A/<%title%>%>
+-->
+</div>
+<!--</div>-->
+<script id="random-script">
+(function() {
+  var pages = [
+    'Accueil',
+    'Affichage_Graphique',
+    'Conventions',
+    'Drivers/mode_reel.h:int86',
+    'Environnement_de_programmation',
+    'GRUB',
+    'Liens',
+    'Langage',
+    'Notes',
+    'Nouveau_Développeur',
+    'Prérequis',
+    'Test_fonctionC',
+  ];
+  var dd = '';
+  for (var i = document.querySelector('head title').innerText.split('/').length - 1; i > 0; i--) {
+    dd += '../'
+  }
+  var rnd = Math.floor(Math.random() * pages.length);
+  document.querySelector('#n-randompage a').setAttribute('href', dd + pages[rnd] + '.html');
+})();
+</script>
+</body>
+</html>
